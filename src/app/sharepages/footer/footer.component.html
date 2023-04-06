@@ -1,0 +1,78 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>quick info</h4>
+        <p>
+          Focuses on primary recycle materials paper, plastic and metal. The
+          main purpose of the Greenpanion application is to help people recycle
+          in a pleasant way, with prizes to match.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Service</h4>
+        <ul>
+          <li>
+            <a routerLink="#">Contact Us</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://we.tl/t-w2qRVcBsGx">Android App</a>
+          </li>
+          <li>
+            <a routerLink="#">Privacy</a>
+          </li>
+          <li>
+            <a routerLink="#">Terms of service</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>useful links</h4>
+        <ul>
+          <div
+            *ngIf="authService.currentUser$ | async as user; else other"
+          ></div>
+          <ng-template #other>
+            <li>
+              <a routerLink="login">Login</a>
+            </li>
+            <li><a routerLink="sign-up">Register</a></li>
+            <li></li
+          ></ng-template>
+
+          <li>
+            <a routerLink="about-us">About Us</a>
+          </li>
+          <li>
+            <a routerLink="how-recycle">How to recycle</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/Greenpanion-106680575518068"
+            target="_blank"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/greenpanion/" target="_blank"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a target="_blank" href="https://we.tl/t-w2qRVcBsGx"
+            ><i class="bi bi-android2"></i
+          ></a>
+        </div>
+      </div>
+      <div class="top" (click)="topFunction()">
+        <i
+          class="bi bi-arrow-up-circle"
+          style="font-size: 30px; color: whitesmoke"
+        ></i>
+      </div>
+    </div>
+  </div>
+</div>

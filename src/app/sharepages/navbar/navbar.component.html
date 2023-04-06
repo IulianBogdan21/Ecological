@@ -1,0 +1,95 @@
+<nav class="navbar fixed-top navbar-expand-sm navbar-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="../../../assets/img/Greenpanion_Icon.png"
+        alt=""
+        width="28"
+        height="28"
+        class="d-inline-block align-text-top"
+      />
+      Greenpanion
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink=""
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <div
+          *ngIf="
+            authService.currentUser$ | async as user;
+            then thenBlock;
+            else other
+          "
+        ></div>
+        <ng-template #other>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="login"
+              routerLinkActive="active-link"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="sign-up"
+              routerLinkActive="active-link"
+              >Register</a
+            >
+          </li>
+        </ng-template>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="about-us"
+            routerLinkActive="active-link"
+            >About us</a
+          >
+        </li>
+        <ng-template #thenBlock>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="user-statistics"
+              routerLinkActive="active-link"
+              >Statistics</a
+            >
+          </li>
+        </ng-template>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="how-recycle"
+            routerLinkActive="active-link"
+            >How to recycle?</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="authService.currentUser$ | async as user">
+            <div (click)="logout()">Logout</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

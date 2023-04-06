@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p class="subtitle">Find out our story and be a part of it</p>
+    <div class="container2">
+      <div class="card">
+        <div class="left">
+          <h3>Who we are</h3>
+        </div>
+        <div class="right">
+          <p>
+            <span>Greenpanion</span> is both a web and mobile application
+            created by seven hard-working students, motivated to make the world
+            a better place. Thinking about all the ways we could help the
+            environment, we decided to help build a more sustainable world
+            through recycling. It is the process by which waste products are
+            broken down to their basic materials and remade into new products.
+            This leads to less need for raw materials, which means that the
+            energy and time invested in extracting the raw materials would only
+            need to happen once and those materials would constantly be cycled
+            and recycled, having a positive impact on the environment.
+          </p>
+        </div>
+      </div>
+    </div>
+    <p id="name" data-aos="fade-up" class="subtitle">
+      What you can recycle using <span>Greenpanion</span>
+    </p>
+    <div data-aos="fade-up" class="container1">
+      <div class="card1" id="card1">
+        <div class="text">
+          <h1>Paper</h1>
+          <div [ngClass]="{ limitTextHeight: isReadMore1 }">
+            <div class="allowed">
+              <fa-icon class="icon" [icon]="faCircleCheck"></fa-icon>
+              <p>Newspapers, Magazines, Office Paper</p>
+            </div>
+            <div class="denied">
+              <fa-icon class="icon" [icon]="faCircleXmark"></fa-icon>
+              <p>Shredded Paper, Sticky Post-it</p>
+            </div>
+          </div>
+          <button class="btn" type="button" (click)="showText1()">
+            {{ isReadMore1 ? "Read More" : "Read Less" }}
+          </button>
+        </div>
+      </div>
+      <div class="card2" id="card2">
+        <div class="text">
+          <h1>Plastic</h1>
+          <div [ngClass]="{ limitTextHeight: isReadMore2 }">
+            <div class="allowed">
+              <fa-icon class="icon" [icon]="faCircleCheck"></fa-icon>
+              <p>Water, Milk & Detergent Bottle</p>
+            </div>
+            <div class="denied">
+              <fa-icon class="icon" [icon]="faCircleXmark"></fa-icon>
+              <p>Grocery Bags, Toys, Bubble Wrap</p>
+            </div>
+          </div>
+          <button class="btn" type="button" (click)="showText2()">
+            {{ isReadMore2 ? "Read More" : "Read Less" }}
+          </button>
+        </div>
+      </div>
+      <div class="card3" id="card3">
+        <div class="text">
+          <h1>Metal</h1>
+          <div [ngClass]="{ limitTextHeight: isReadMore3 }">
+            <div class="allowed">
+              <fa-icon class="icon" [icon]="faCircleCheck"></fa-icon>
+              <p>Canned Meat, Vegetables & Fruit</p>
+            </div>
+            <div class="denied">
+              <fa-icon class="icon" [icon]="faCircleXmark"></fa-icon>
+              <p>Razor Blades, Bottle Caps</p>
+            </div>
+          </div>
+          <button class="btn" type="button" (click)="showText3()">
+            {{ isReadMore3 ? "Read More" : "Read Less" }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

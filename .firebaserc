@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "greenpanion-test": {
+      "hosting": {
+        "Greenpanion-Test": [
+          "greenpanion-test"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "greenpanion-test"
+  }
+}

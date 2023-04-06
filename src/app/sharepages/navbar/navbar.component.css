@@ -1,0 +1,19 @@
+.nav-link:hover {
+    color: var(--darkgreen-color);
+    padding: 8px;
+    background-color: lightgreen;
+    color: black;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-link {
+    font-family: 'Poppins', serif; 
+    border-radius: 10px;
+}
+
+.navbar-brand {
+    color: rgb(98, 89, 89);
+    font-weight: bold;
+}
